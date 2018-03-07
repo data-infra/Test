@@ -1,0 +1,58 @@
+test_add (test_mathfunc.TestMathFunc)
+Test method add(a, b) ... ok
+test_minus (test_mathfunc.TestMathFunc)
+Test method minus(a, b) ... ok
+test_divide (test_mathfunc.TestMathFunc)
+Test method divide(a, b) ... ok
+test_multi (test_mathfunc.TestMathFunc)
+Test method multi(a, b) ... ok
+test_add (test_mathfunc.TestMathFunc)
+Test method add(a, b) ... ok
+test_divide (test_mathfunc.TestMathFunc)
+Test method divide(a, b) ... ok
+test_minus (test_mathfunc.TestMathFunc)
+Test method minus(a, b) ... ok
+test_multi (test_mathfunc.TestMathFunc)
+Test method multi(a, b) ... ok
+test_add (test_mathfunc.TestMathFunc)
+Test method add(a, b) ... ok
+test_divide (test_mathfunc.TestMathFunc)
+Test method divide(a, b) ... ok
+test_minus (test_mathfunc.TestMathFunc)
+Test method minus(a, b) ... ok
+test_multi (test_mathfunc.TestMathFunc)
+Test method multi(a, b) ... ok
+test_add (test_mathfunc.TestMathFunc)
+Test method add(a, b) ... ok
+test_divide (test_mathfunc.TestMathFunc)
+Test method divide(a, b) ... ok
+test_minus (test_mathfunc.TestMathFunc)
+Test method minus(a, b) ... ok
+test_multi (test_mathfunc.TestMathFunc)
+Test method multi(a, b) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.001s
+
+OK
+test_add (test_mathfunc.TestMathFunc) ... skipped '我想临时跳过这个测试用例.'
+test_minus (test_mathfunc.TestMathFunc) ... skipped '跳过这个测试用例'
+test_divide (test_mathfunc.TestMathFunc) ... ok
+test_multi (test_mathfunc.TestMathFunc) ... ok
+test_add (test_mathfunc.TestMathFunc) ... skipped '我想临时跳过这个测试用例.'
+test_divide (test_mathfunc.TestMathFunc) ... ok
+test_minus (test_mathfunc.TestMathFunc) ... skipped '跳过这个测试用例'
+test_multi (test_mathfunc.TestMathFunc) ... ok
+test_add (test_mathfunc.TestMathFunc) ... skipped '我想临时跳过这个测试用例.'
+test_divide (test_mathfunc.TestMathFunc) ... ok
+test_minus (test_mathfunc.TestMathFunc) ... skipped '跳过这个测试用例'
+test_multi (test_mathfunc.TestMathFunc) ... ok
+test_add (test_mathfunc.TestMathFunc) ... skipped '我想临时跳过这个测试用例.'
+test_divide (test_mathfunc.TestMathFunc) ... ok
+test_minus (test_mathfunc.TestMathFunc) ... skipped '跳过这个测试用例'
+test_multi (test_mathfunc.TestMathFunc) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.109s
+
+OK (skipped=8)
