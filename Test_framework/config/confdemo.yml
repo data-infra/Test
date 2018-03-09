@@ -1,0 +1,58 @@
+
+# 数组，等价于[ 'Cat', 'Dog', 'Goldfish' ]
+- Cat
+- Dog
+- Goldfish
+
+# 二维数组，等价于[ [ 'Cat', 'Dog', 'Goldfish' ] ]
+-
+ - Cat
+ - Dog
+ - Goldfish
+
+# 对象、数组嵌套 { languages: [ 'Ruby', 'Perl','Python' ] }
+languages:
+ - Ruby
+ - Perl
+ - Python
+
+# 对象嵌套 { hash: { name: 'Steve', foo: 'bar' } }
+hash:
+ name: Steve
+ foo: bar
+hash: { name: Steve, foo: bar }    # { hash: { name: 'Steve', foo: 'bar' } }
+
+# 字符串
+str: name1     # { str: 'name1' }   字符串默认不使用引号表示。
+str: 'key： value'   # { str: 'key: value' }  如果字符串之中包含空格或特殊字符，需要放在引号之中。
+str: '内容\n字符串' # { str: '内容\\n字符串'}   单引号会对转义字符
+str: "内容\n字符串"  # { str: '内容\n字符串' }  双引号不会对转义字符
+str: 'labor''s day'  # { str: 'labor\'s day' }   单引号之中如果还有单引号，必须连续使用两个单引号转义。
+str: 这是一段
+  多行
+  字符串           # { str: '这是一段 多行 字符串' }    字符串可以写成多行，从第二行开始，必须有一个单空格缩进。换行符会被转为空格。
+
+# 多行字符串可以使用|保留换行符  等价于{ str: 'Foo\nBar\n'}
+#+表示保留缩进块末尾的换行，-表示删除字符串末尾的换行。 等价于{ str: 'Foo\nBar'}
+str: |-
+  Foo
+  Bar
+
+# 可以使用>折叠换行  下面的等价于{str: 'Foo Bar\n' }
+str: >
+  Foo
+  Bar
+
+#字符串之中可以插入 HTML 标记。 { message: '\n<p style="color: red">\n  段落\n</p>\n' }
+message: |
+
+  <p style="color: red">
+    段落
+  </p>
+
+number: 12.30       # { number: 12.30 }
+isSet: true   #{ isSet: true }
+parent: ~    # { parent: null }
+date: 1976-07-31    #{ date: new Date('1976-07-31') }
+e: !!str 123   # { e: '123'}   YAML 允许使用两个感叹号，强制转换数据类型。
+f: !!str true  # { f: 'true'}  YAML 允许使用两个感叹号，强制转换数据类型。
