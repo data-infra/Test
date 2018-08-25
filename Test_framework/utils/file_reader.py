@@ -1,3 +1,5 @@
+# 用于文件的读取,包含配置文件和数据文件的读取函数.根据文件地址，返回文件中包含的内容
+
 import yaml
 import os
 from xlrd import open_workbook

@@ -1,5 +1,5 @@
 """
-读取配置文件中的配置。这里配置文件用的yaml，也可用其他如XML,INI等，需在file_reader中添加相应的Reader进行处理。
+项目公共内容配置，以及读取配置文件中的配置。这里配置文件用的yaml，也可用其他如XML,INI等，需在file_reader中添加相应的Reader进行处理。
 """
 import os
 from .file_reader import YamlReader
@@ -18,6 +18,7 @@ REPORT_PATH = os.path.join(BASE_PATH, 'report')
 
 class Config:
     def __init__(self, config=CONFIG_FILE):
+        print('配置文件地址：',config)
         self.config = YamlReader(config).data
 
     def get(self, element, index=0):

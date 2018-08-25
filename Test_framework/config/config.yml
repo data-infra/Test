@@ -1,7 +1,22 @@
-URL: http://www.baidu.com
+local_url: http://xxxxxxxx/app    # 测试网址
+api_url: http://xxxxxx/
+images:
+ - images/0.jpg
+ - images/1.jpg
+ - images/2.jpg
+ - images/3.jpg
+ - images/4.jpg
+ - images/5.jpg
+ - images/6.jpg
+ - images/7.jpg
+num: 800
 log:
     file_name: test.log      # 输出日志文件名
     backup: 5                # 备份名
     console_level: WARNING  # 控制台输出等级
     file_level: DEBUG       # 文件输出等级
     pattern: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'  # 打印输出格式
+
+
+
+

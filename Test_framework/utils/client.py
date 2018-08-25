@@ -6,6 +6,9 @@
 import requests
 import socket
 import json
+import requests
+import time
+import asyncio
 from utils.log import logger
 
 METHODS = ['GET', 'POST', 'HEAD', 'TRACE', 'PUT', 'DELETE', 'OPTIONS', 'CONNECT']  # 所有支持的前后前交互方法
@@ -94,3 +97,28 @@ class TCPClient(object):
         if self.connected:
             self._sock.close()
             logger.debug('TCPClient closed.')
+
+
+# 异步并发客户端
+class Asyncio_Client(object):
+
+    def __init__(self):
+        self.loop=asyncio.get_event_loop()
+        self.tasks=[]
+
+    # 将异步函数介入任务列表。后续参数直接传给异步函数
+    def set_task(self,task_fun,num,*args):
+        for i in range(num):
+            self.tasks.append(task_fun(*args))
+
+    # 运行，获取返回结果
+    def run(self):
+        back=[]
+        try:
+            f = asyncio.wait(self.tasks)   # 创建future
+            self.loop.run_until_complete(f)  # 等待future完成
+        finally:
+            pass
+            # self.loop.run_forever()
+            # self.loop.close()  # 当轮训器关闭以后，所有没有执行完成的协成将全部关闭
+
