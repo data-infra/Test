@@ -19,7 +19,7 @@ class TestBaiDu(unittest.TestCase):
         self.page = BaiDuMainPage(browser_type='chrome').get(self.URL, maximize_window=False)
 
     def sub_tearDown(self):
-        self.driver.quit()  # 清理退出
+        pass
 
     def test_search(self):
         datas = ExcelReader(self.excel).data
